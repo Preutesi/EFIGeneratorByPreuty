@@ -7,12 +7,16 @@
         mc:Ignorable="d"
         Title="Creation" 
         Height="450" 
-        Width="800"
+        Width="500"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         Background="#FF0C0C0C">
     <Grid MouseDown="Move">
+        <Button Content="Next" HorizontalAlignment="Left" Height="31" Margin="344,398,0,0" VerticalAlignment="Top" Width="126"/>
         <!--CREATION WINDOW-->
+        <DockPanel Margin="0,0,0,71">
+            <Frame x:Name="_mainFrame"/>
+        </DockPanel>
     </Grid>
 </Window>

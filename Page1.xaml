@@ -1,0 +1,26 @@
+﻿<Page x:Class="EFIGeneratorByPreuty.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EFIGeneratorByPreuty"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="500"
+      Title="Page1">
+    <Grid>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Height="18" Margin="108,95,0,0" VerticalAlignment="Top" Width="18" FontSize="18" Foreground="White"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Height="18" Margin="206,95,0,0" VerticalAlignment="Top" Width="18" FontSize="18" Foreground="White"/>
+        <Label Panel.ZIndex="5" Content="Intel" HorizontalAlignment="Left" Height="32" Margin="131,84,0,0" VerticalAlignment="Top" Width="63" Foreground="White" FontSize="18"/>
+        <Label Panel.ZIndex="5" Content="AMD" HorizontalAlignment="Left" Height="32" Margin="229,84,0,0" VerticalAlignment="Top" Width="63" Foreground="White" FontSize="18"/>
+        <Label Panel.ZIndex="5" Content="CPU Name:" HorizontalAlignment="Left" Height="32" Margin="43,137,0,0" VerticalAlignment="Top" Width="104" Foreground="White" FontSize="18"/>
+        <TextBox Panel.ZIndex="2" x:Name="txtCPU" HorizontalAlignment="Left" Height="36" Margin="166,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" TextChanged="txtCPU_TextChanged"/>
+        <Label Panel.ZIndex="5" Content="PC:" HorizontalAlignment="Left" Height="32" Margin="43,189,0,0" VerticalAlignment="Top" Width="104" Foreground="White" FontSize="18"/>
+        <ComboBox Panel.ZIndex="1" x:Name="cmbPC" HorizontalAlignment="Left" Height="28" Margin="108,193,0,0" VerticalAlignment="Top" Width="168"/>
+        <Label Panel.ZIndex="5" Content="CPU:" HorizontalAlignment="Left" Height="32" Margin="43,84,0,0" VerticalAlignment="Top" Width="104" Foreground="White" FontSize="18"/>
+        <ComboBox x:Name="cmbCPU" HorizontalAlignment="Left" Height="36" Margin="166,137,0,0" VerticalAlignment="Top" Width="270">
+            <ComboBoxItem Content="Desktop"/>
+            <ComboBoxItem Content="High end desktop"/>
+            <ComboBoxItem Content="Laptop"/>
+        </ComboBox>
+    </Grid>
+</Page>

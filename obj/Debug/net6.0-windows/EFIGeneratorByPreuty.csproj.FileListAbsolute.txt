@@ -21,3 +21,5 @@ C:\Users\andre\Documents\GitHub repos\EFIGeneratorByPreuty\EFIGeneratorByPreuty\
 C:\Users\andre\Documents\GitHub repos\EFIGeneratorByPreuty\EFIGeneratorByPreuty\obj\Debug\net6.0-windows\ref\EFIGeneratorByPreuty.dll
 C:\Users\andre\Documents\GitHub repos\EFIGeneratorByPreuty\EFIGeneratorByPreuty\obj\Debug\net6.0-windows\Creation.g.cs
 C:\Users\andre\Documents\GitHub repos\EFIGeneratorByPreuty\EFIGeneratorByPreuty\obj\Debug\net6.0-windows\Creation.baml
+C:\Users\andre\Documents\GitHub repos\EFIGeneratorByPreuty\EFIGeneratorByPreuty\obj\Debug\net6.0-windows\Page1.g.cs
+C:\Users\andre\Documents\GitHub repos\EFIGeneratorByPreuty\EFIGeneratorByPreuty\obj\Debug\net6.0-windows\Page1.baml

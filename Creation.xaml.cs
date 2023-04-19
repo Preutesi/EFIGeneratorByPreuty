@@ -22,6 +22,7 @@ namespace EFIGeneratorByPreuty
         public Creation()
         {
             InitializeComponent();
+            _mainFrame.Navigate(new Page1());
         }
 
         private void Move(object sender, MouseButtonEventArgs e)
