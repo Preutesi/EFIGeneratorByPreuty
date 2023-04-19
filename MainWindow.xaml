@@ -1,0 +1,20 @@
+﻿<Window x:Class="EFIGeneratorByPreuty.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EFIGeneratorByPreuty"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="400" 
+        Width="320" 
+        WindowStyle="None" 
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize"
+        Background="#FF0C0C0C">
+    <Grid MouseDown="Move">
+        <!--DOWNLOAD SCREEN-->
+        <Image Source="/BlackLogo.png" Margin="-56,-45,-39,7"></Image>
+        <TextBlock Panel.ZIndex="3" Foreground="White" x:Name="ExecutionLog" Margin="10,262,10,96"></TextBlock>
+    </Grid>
+</Window>
