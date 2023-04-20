@@ -15,6 +15,6 @@
     <Grid MouseDown="Move">
         <!--DOWNLOAD SCREEN-->
         <Image Source="/BlackLogo.png" Margin="-56,-45,-39,7"></Image>
-        <TextBlock Panel.ZIndex="3" Foreground="White" x:Name="ExecutionLog" Margin="10,262,10,96"></TextBlock>
+        <TextBlock Panel.ZIndex="3" Foreground="White" x:Name="ExecutionLog" Margin="30,261,10,97"></TextBlock>
     </Grid>
 </Window>

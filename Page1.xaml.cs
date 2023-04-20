@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Xml.Linq;
 using System.IO;
 using System.Windows.Threading;
+using System.Reflection;
 
 namespace EFIGeneratorByPreuty
 {
@@ -25,8 +26,11 @@ namespace EFIGeneratorByPreuty
     {
         List<string> intel = new List<string>();
         List<string> amd = new List<string>();
-        List<string> allNames = new List<string>();
-        
+        public static List<string> allNames = new List<string>();
+
+        public static string cpuType = "";
+        public static string cpuName = "";
+        public static string pcType = "";
 
 
         public Page1()
@@ -35,33 +39,91 @@ namespace EFIGeneratorByPreuty
             CheckForIntelUPDATES();
             CheckForAmdUPDATES();
             GetAllCPUNames();
+            BkgProcess();
             allNames = intel;
             allNames.AddRange(amd);
-            cmbCPU.Items.Clear();
+            lstCPU.Items.Clear();
             for (int i = 0; i < allNames.Count; i++)
-                cmbCPU.Items.Add(allNames[i]);
+                lstCPU.Items.Add(allNames[i]);
+        }
+
+         void BkgProcess()
+        {
+            Dispatcher.BeginInvoke(new Action(() =>
+            {
+                cpuName = txtCPU.Text;
+                if (!(bool)rbIntel.IsChecked && !(bool)rbAmd.IsChecked)
+                    cpuType = "";
+                if ((bool)rbIntel.IsChecked)
+                    cpuType = "Intel";
+                else if ((bool)rbAmd.IsChecked)
+                    cpuType = "Amd";
+                pcType = cmbPC.Text;
+            }));
         }
         
         void CheckForIntelUPDATES()
         {
-            //fai partire un codice python
+            //fai partire un codice python per scraping
         }
 
         void CheckForAmdUPDATES()
         {
-            //fai partire il codice python
+            //fai partire il codice python per scraping
         }
+
+        int before = 0;
 
         private void txtCPU_TextChanged(object sender, TextChangedEventArgs e)
         {
-            cmbCPU.IsDropDownOpen = true;
+            if (before == 0 && txtCPU.Text.Length == 1)
+                lstCPU.Height = 135;
             for (int i = 0; i < allNames.Count; i++)
-                if (allNames[i].Contains(txtCPU.Text))
+                if (allNames[i].ToLower().Contains(txtCPU.Text.ToLower()))
                 {
-                    cmbCPU.SelectedIndex = i;
+                    var item = lstCPU.Items.GetItemAt(i);
+                    lstCPU.ScrollIntoView(item);
+                    ListBoxItem lbi = (ListBoxItem)lstCPU.ItemContainerGenerator.ContainerFromIndex(i);
+                    lbi.IsSelected = true;
                     break;
                 }
             txtCPU.Focus();
+        }
+
+        private void SetName(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                txtCPU.Text = allNames[lstCPU.SelectedIndex];
+                lstCPU.Height = 0;
+            }
+            else if (e.Key == Key.Up)
+            {
+                if (lstCPU.SelectedIndex - 1 >= 0)
+                {
+                    var item = lstCPU.Items.GetItemAt(lstCPU.SelectedIndex - 1);
+                    lstCPU.ScrollIntoView(item);
+                    ListBoxItem lbi = (ListBoxItem)lstCPU.ItemContainerGenerator.ContainerFromIndex(lstCPU.SelectedIndex - 1);
+                    lbi.IsSelected = true;
+                }
+            }
+            else if (e.Key == Key.Down)
+            {
+                if (lstCPU.SelectedIndex + 1 < allNames.Count)
+                {
+                    var item = lstCPU.Items.GetItemAt(lstCPU.SelectedIndex + 1);
+                    lstCPU.ScrollIntoView(item);
+                    ListBoxItem lbi = (ListBoxItem)lstCPU.ItemContainerGenerator.ContainerFromIndex(lstCPU.SelectedIndex + 1);
+                    lbi.IsSelected = true;
+                }
+            }
+            txtCPU.Focus();
+        }
+
+        private void SetNameOnclick(object sender, MouseButtonEventArgs e)
+        {
+            txtCPU.Text = allNames[lstCPU.SelectedIndex];
+            lstCPU.Height = 0;
         }
 
         void GetAllCPUNames()
@@ -84,9 +146,9 @@ namespace EFIGeneratorByPreuty
                     break;
                 string[] items = line.Split(";");
                 if (int.TryParse(items[1], out int i))
-                    names.Add(items[0] + "|" + items[items.Length - 1]);
+                    names.Add(items[0] + " | " + items[items.Length - 2]);
                 else 
-                    names.Add(items[0] + " " + items[1] + "|" + items[items.Length - 1]);
+                    names.Add(items[0] + " " + items[1] + " | " + items[items.Length - 1]);
             }
             return names;
         }

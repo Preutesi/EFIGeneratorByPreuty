@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6jJ0lXcTZIL/CUPfy3jGkFnf5ARH+Jg92rBM6e0aJ7EHPE0DaS2hx01YFFm5jsHqN3s1M2cEJHtFkDXLmtyEWQ==",
+  "dgSpecHash": "QPs02VL8Gl6moW7mEZQOeNpBv+QEvEiScFAcS+iMvzj41VX4frpLV4uO/qo54BfNo9JDP+1oDm5gB4j3I+IZTg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\erika\\OneDrive\\Desktop\\EFIGeneratorByPreuty\\EFIGeneratorByPreuty.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\erika\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512",
-    "C:\\Users\\erika\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\andre\\Documents\\GitHub repos\\EFIGeneratorByPreuty\\EFIGeneratorByPreuty\\EFIGeneratorByPreuty.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

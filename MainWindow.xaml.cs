@@ -52,7 +52,7 @@ namespace EFIGeneratorByPreuty
             foreach (var f in Directory.GetFiles(pathBOOT))
                 if (f.Replace(pathBOOT, "") != "BOOTx64.efi")
                     File.Delete(f);
-
+            //AGGIUNGI SCRAPING
             string pathDRIVERS = Directory.GetCurrentDirectory() + @"\Files\Debug\OPENCORE\EFI\OC\Drivers\";
             foreach (var f in Directory.GetFiles(pathDRIVERS))
             {
