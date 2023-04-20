@@ -1,0 +1,360 @@
+﻿Processor;Model;Cores 1;Cores 2;Threads;Integrated graphics;CodeName
+Core i9;13900K;8;16;32;UHD 770;Raptor Lake
+Core i9;13900KF;8;16;32;—;Raptor Lake
+Core i9;13900;8;16;32;UHD 770;Raptor Lake
+Core i9;13900F;8;16;32;—;Raptor Lake
+Core i9;13900T;8;16;32;UHD 770;Raptor Lake
+Core i7;13700K;8;8;24;UHD 771;Raptor Lake
+Core i7;13700KF;8;8;24;—;Raptor Lake
+Core i7;13700;8;8;24;UHD 770;Raptor Lake
+Core i7;13700F;8;8;24;—;Raptor Lake
+Core i7;13700T;8;8;24;UHD 770;Raptor Lake
+Core i5;13600K;6;8;20;UHD 770;Raptor Lake
+Core i5;13600KF;6;8;20;—;Raptor Lake
+Core i5;13600;6;8;20;UHD 770;Raptor Lake
+Core i5;13600T;6;8;20;UHD 771;Raptor Lake
+Core i5;13500;6;8;20;UHD 772;Raptor Lake
+Core i5;13500T;6;8;20;UHD 773;Raptor Lake
+Core i5;13400;6;4;16;UHD 730;Raptor Lake
+Core i5;13400F;6;4;16;—;Raptor Lake
+Core i5;13400T;6;4;16;UHD 730;Raptor Lake
+Core i3;13100;4;—;8;UHD 731;Raptor Lake
+Core i3;13100F;4;—;8;—;Raptor Lake
+Core i3;13100T;4;—;8;UHD 730;Raptor Lake
+;;;;;;
+Core i9;12900K;8;8;24;UHD 770;Alder Lake
+Core i9;12900KF;8;8;24;—;Alder Lake
+Core i9;12900KS;8;8;24;UHD 770;Alder Lake
+Core i9;12900;8;8;24;UHD 771;Alder Lake
+Core i9;12900F;8;8;24;—;Alder Lake
+Core i9;12900T;8;8;24;UHD 770;Alder Lake
+Core i7;12700K;8;4;20;UHD 771;Alder Lake
+Core i7;12700KF;8;4;20;—;Alder Lake
+Core i7;12700;8;4;20;UHD 770;Alder Lake
+Core i7;12700F;8;4;20;—;Alder Lake
+Core i7;12700T;8;4;20;UHD 770;Alder Lake
+Core i5;12600K;6;4;16;UHD 771;Alder Lake
+Core i5;12600KF;6;4;16;—;Alder Lake
+Core i5;12600;6;—;12;UHD 770;Alder Lake
+Core i5;12600T;6;—;12;UHD 771;Alder Lake
+Core i5;12500;6;—;12;UHD 772;Alder Lake
+Core i5;12500T;6;—;12;UHD 773;Alder Lake
+Core i5;12400;6;—;12;UHD 730;Alder Lake
+Core i5;12400F;6;—;12;—;Alder Lake
+Core i5;12400T;6;—;12;UHD 730;Alder Lake
+Core i3;12300;4;—;8;UHD 731;Alder Lake
+Core i3;12300T;4;—;8;UHD 732;Alder Lake
+Core i3;12100;4;—;8;UHD 733;Alder Lake
+Core i3;12100F;4;—;8;—;Alder Lake
+Core i3;12100T;4;—;8;UHD 730;Alder Lake
+Pentium;G7400;2;—;4;UHD 710;Alder Lake
+Pentium;G7400T;2;—;4;UHD 711;Alder Lake
+Celeron;G6900;2;—;2;UHD 712;Alder Lake
+Celeron;G6900T;2;—;2;UHD 713;Alder Lake
+;;;;;;
+Core i9;12950HX;8;8;24;UHD;Alder Lake
+Core i9;12900HX;8;8;24;UHD;Alder Lake
+Core i9;12900HK;6;8;20;Iris Xe;Alder Lake
+Core i9;12900H;6;8;20;Iris Xe;Alder Lake
+Core i7;12850HX;8;8;24;UHD;Alder Lake
+Core i7;12800HX;8;8;24;UHD;Alder Lake
+Core i7;12650HX;6;8;20;UHD;Alder Lake
+Core i7;12800H;6;8;20;Iris Xe;Alder Lake
+Core i7;12700H;6;8;20;Iris Xe;Alder Lake
+Core i7;12650H;6;4;16;UHD;Alder Lake
+Core i7;1280P;6;8;20;Iris Xe;Alder Lake
+Core i7;1270P;4;8;16;Iris Xe;Alder Lake
+Core i7;1260P;4;8;16;Iris Xe;Alder Lake
+Core i7;1265U;2;8;12;Iris Xe;Alder Lake
+Core i7;1255U;2;8;12;Iris Xe;Alder Lake
+Core i7;1260U;2;8;12;Iris Xe;Alder Lake
+Core i7;1250U;2;8;12;Iris Xe;Alder Lake
+Core i5;12600HX;4;8;16;UHD;Alder Lake
+Core i5;12450HX;4;4;12;UHD;Alder Lake
+Core i5;12600H;4;8;16;Iris Xe;Alder Lake
+Core i5;12500H;4;8;16;Iris Xe;Alder Lake
+Core i5;12450H;4;4;12;UHD;Alder Lake
+Core i5;1250P;4;8;16;Iris Xe;Alder Lake
+Core i5;1240P;4;8;16;Iris Xe;Alder Lake
+Core i5;1245U;2;8;12;Iris Xe;Alder Lake
+Core i5;1235U;2;8;12;Iris Xe;Alder Lake
+Core i5;1240U;2;8;12;Iris Xe;Alder Lake
+Core i5;1230U;2;8;12;Iris Xe;Alder Lake
+Core i3;1220P;2;8;12;UHD;Alder Lake
+Core i3;1215U;2;4;8;UHD;Alder Lake
+Core i3;1210U;2;4;8;UHD;Alder Lake
+Pentium;8505;1;4;6;UHD;Alder Lake
+Pentium;8500;1;4;6;UHD;Alder Lake
+Celeron;7305;1;4;5;UHD;Alder Lake
+Celeron;7300;1;4;5;UHD;Alder Lake
+;;;;;;
+Core i9;11900K;8;0;16;UHD 750;Rocket Lake
+Core i9;11900KF;8;0;16;-;Rocket Lake
+Core i9;11900;8;0;16;UHD 750;Rocket Lake
+Core i9;11900F;8;0;16;-;Rocket Lake
+Core i9;11900T;8;0;16;UHD 750;Rocket Lake
+Core i7;11700K;8;0;16;UHD 751;Rocket Lake
+Core i7;11700KF;8;0;16;-;Rocket Lake
+Core i7;11700;8;0;16;UHD 750;Rocket Lake
+Core i7;11700F;8;0;16;-;Rocket Lake
+Core i7;11700T;8;0;16;UHD 750;Rocket Lake
+Core i5;11600K;6;0;12;UHD 751;Rocket Lake
+Core i5;11600KF;6;0;12;-;Rocket Lake
+Core i5;11600;6;0;12;UHD 750;Rocket Lake
+Core i5;11600T;6;0;12;UHD 751;Rocket Lake
+Core i5;11500;6;0;12;UHD 752;Rocket Lake
+Core i5;11500T;6;0;12;UHD 753;Rocket Lake
+Core i5;11400;6;0;12;UHD 730;Rocket Lake
+Core i5;11400F;6;0;12;-;Rocket Lake
+Core i5;11400T;6;0;12;UHD 730;Rocket Lake
+;;;;;;
+Xeon;W-11955M;8;0;16;UHD Graphics for 11th Gen Processors;Tiger Lake
+Xeon;W-11865MRE;8;0;16;UHD Graphics for 11th Gen Processors;Tiger Lake
+Xeon;W-11865MLE;8;0;16;UHD Graphics for 11th Gen Processors;Tiger Lake
+Xeon;W-11855M;6;0;12;UHD Graphics for 11th Gen Processors;Tiger Lake
+Xeon;W-11555MRE;6;0;12;UHD Graphics for 11th Gen Processors;Tiger Lake
+Xeon;W-11555MLE;6;0;12;UHD Graphics for 11th Gen Processors;Tiger Lake
+Xeon;W-11155MRE;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Xeon;W-11155MLE;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i9;11980HK;8;0;16;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i9;11950H;8;0;16;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i9;11900H;8;0;16;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i7;11850HE;8;0;16;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i7;11850H;8;0;16;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i7;11800H;8;0;16;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i7;11850H;8;0;16;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i7;11600H;6;0;12;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i7;11390H;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i7;11375H;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i7;11370H w/ IPU;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i7;11370H w/ IPU;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i7;11375H w/ IPU;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i7;1195G7;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i7;1195G7 w/ IPU;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i7;1185GRE;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i7;1185G7E;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i7;1165G7;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i7;1185G7 w/ IPU;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i7;1165G7 w/ IPU;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i7;1180G7 w/ IPU;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i7;1160G7 w/ IPU;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i5;11500H;6;0;12;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i5;11500HE;6;0;12;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i5;11400H;6;0;12;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i5;11260H;6;0;12;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i5;11320H w/ IPU;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i5;11300H w/ IPU;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i5;1155G7;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i5;1145G7 w/ IPU;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i5;1145G7E w/ IPU;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i5;1145G7E;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i5;1135G7;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i5;1130G7 w/ IPU;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i5;1140G7 w/ IPU;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i3;11100HE;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i3;1125G4;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i3;1125G4 w/ IPU;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i3;1120G4 w/ IPU;4;0;8;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i3;1115GRE;2;0;4;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i3;1115G4E;2;0;4;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i3;1115G4;2;0;4;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i3;1115G4 w/ IPU;2;0;4;UHD Graphics for 11th Gen Processors;Tiger Lake
+Core i3;1110G4 w/ IPU;2;0;4;UHD Graphics for 11th Gen Processors;Tiger Lake
+Pentium;Gold 7505 w/ IPU;2;0;4;UHD Graphics for 11th Gen Processors;Tiger Lake
+Celeron;6600HE;2;0;2;UHD Graphics for 11th Gen Processors;Tiger Lake
+Celeron;6305 w/ IPU;2;0;2;UHD Graphics for 11th Gen Processors;Tiger Lake
+Celeron;6305E;2;0;2;UHD;Tiger Lake
+;;;;;;
+i9-10910;10;0;20;UHD 630;Comet Lake;
+i9-10900K;10;0;20;UHD 631;Comet Lake;
+i9-10900KF;10;0;20;—;Comet Lake;
+i9-10900;10;0;20;UHD 630;Comet Lake;
+i9-10900E;10;0;20;UHD 631;Comet Lake;
+i9-10900F;10;0;20;—;Comet Lake;
+i9-10900T;10;0;20;UHD 630;Comet Lake;
+i9-10850K;10;0;20;UHD 631;Comet Lake;
+i7-10700K;8;0;16;UHD 632;Comet Lake;
+i7-10700KF;8;0;16;—;Comet Lake;
+i7-10700;8;0;16;UHD 630;Comet Lake;
+i7-10700E;8;0;16;UHD 631;Comet Lake;
+i7-10700F;8;0;16;—;Comet Lake;
+i7-10700T;8;0;16;UHD 630;Comet Lake;
+i7-10700TE;8;0;16;UHD 631;Comet Lake;
+i5-10600K;6;0;12;UHD 632;Comet Lake;
+i5-10600KF;6;0;12;—;Comet Lake;
+i5-10600;6;0;12;UHD 630;Comet Lake;
+i5-10600T;6;0;12;UHD 631;Comet Lake;
+i5-10505;6;0;12;UHD 632;Comet Lake;
+i5-10500;6;0;12;UHD 633;Comet Lake;
+i5-10500E;6;0;12;UHD 634;Comet Lake;
+i5-10500T;6;0;12;UHD 635;Comet Lake;
+i5-10500TE;6;0;12;UHD 636;Comet Lake;
+i5-10400;6;0;12;UHD 637;Comet Lake;
+i5-10400F;6;0;12;—;Comet Lake;
+i5-10400T;6;0;12;UHD 630;Comet Lake;
+i3-10320;4;0;8;UHD 631;Comet Lake;
+i3-10300;4;0;8;UHD 632;Comet Lake;
+i3-10300T;4;0;8;UHD 633;Comet Lake;
+i3-10100;4;0;8;UHD 634;Comet Lake;
+i3-10100E;4;0;8;UHD 635;Comet Lake;
+i3-10100F;4;0;8;—;Comet Lake;
+i3-10100T;4;0;8;UHD 630;Comet Lake;
+i3-10100TE;4;0;8;UHD 631;Comet Lake;
+;;;;;;
+i7-1065G7;4;0;8;Iris Plus;Ice Lake;
+i7-1060G7;4;0;8;Iris Plus;Ice Lake;
+i7-10750H;6;0;12;UHD;Comet Lake;
+i7-10710U;6;0;12;UHD;Comet Lake;
+i7-10610U;4;0;8;UHD;Comet Lake;
+i7-10510U;4;0;8;UHD;Comet Lake;
+i7-10510Y;4;0;8;UHD;Amber Lake Y;
+i5-10500H;6;0;12;UHD;Comet Lake;
+i5-10210U;4;0;8;UHD 620;Comet Lake;
+i3-10110Y;2;0;4;UHD 615;Amber Lake Y;
+;;;;;;
+i9-9900KS;8;0;16;UHD 630;Coffee Lake;
+i9-9900K;8;0;16;UHD 630;Coffee Lake;
+i9-9900;8;0;16;UHD 630;Coffee Lake;
+i9-9900T;8;0;16;UHD 630;Coffee Lake;
+i7-9700K;8;0;8;UHD 630;Coffee Lake;
+i7-9700;8;0;8;UHD 630;Coffee Lake;
+i7-9700T;8;0;8;UHD 630;Coffee Lake;
+i7-9700TE;8;0;8;UHD 630;Coffee Lake;
+i5-9600K;6;0;6;UHD 630;Coffee Lake;
+i5-9600KF;6;0;6;—;Coffee Lake;
+i5-9600;6;0;6;UHD 630;Coffee Lake;
+i5-9600T;6;0;6;UHD 630;Coffee Lake;
+i5-9500;6;0;6;UHD 630;Coffee Lake;
+i5-9500E;6;0;6;UHD 630;Coffee Lake;
+i5-9500F;6;0;6;—;Coffee Lake;
+i5-9500T;6;0;6;UHD 630;Coffee Lake;
+i5-9500TE;6;0;6;UHD 630;Coffee Lake;
+i5-9400;6;0;6;UHD 630;Coffee Lake;
+i5-9400F;6;0;6;—;Coffee Lake;
+i5-9400T;6;0;6;UHD 630;Coffee Lake;
+i3-9350K;4;0;4;UHD 630;Coffee Lake;
+i3-9350KF;4;0;4;—;Coffee Lake;
+i3-9320;4;0;4;UHD 630;Coffee Lake;
+i3-9300;4;0;4;UHD 630;Coffee Lake;
+i3-9300T;4;0;4;UHD 630;Coffee Lake;
+i3-9100;4;0;4;UHD 630;Coffee Lake;
+i3-9100E;4;0;4;UHD 630;Coffee Lake;
+i3-9100F;4;0;4;—;Coffee Lake;
+i3-9100T;4;0;4;UHD 630;Coffee Lake;
+i3-9100TE;4;0;4;UHD 630;Coffee Lake;
+;;;;;;
+i7-8700K;6;0;12;UHD 630;Coffee Lake;
+i7-8700;6;0;12;UHD 630;Coffee Lake;
+i7-8086K;6;0;12;UHD 630;Coffee Lake;
+i5-8600K;6;0;6;UHD 630;Coffee Lake;
+i5-8500;6;0;6;UHD 630;Coffee Lake;
+i5-8400;6;0;6;UHD 630;Coffee Lake;
+i3-8350K;4;0;4;UHD 630;Coffee Lake;
+i3-8100;4;0;4;UHD 630;Coffee Lake;
+;;;;;;
+m3-8100Y;2;0;4;UHD 615;Amber Lake Y;
+i9-8950HK;6;0;12;UHD 630;Coffee Lake;
+i7-8850H;6;0;12;UHD 630;Coffee Lake;
+i7-8750H;6;0;12;UHD 630;Coffee Lake;
+i7-8700B;6;0;12;UHD 630;Coffee Lake;
+i7-8665U;4;0;8;UHD 620;Whiskey Lake;
+i7-8650U;4;0;8;UHD 620;Kaby Lake R;
+i7-8569U;4;0;8;Iris Plus 655;Coffee Lake;
+i7-8565U;4;0;8;UHD;Whiskey Lake;
+i7-8559U;4;0;8;Iris Plus 655;Coffee Lake;
+i7-8557U;4;0;8;Iris Plus 645;Coffee Lake;
+i7-8550U;4;0;8;UHD 620;Kaby Lake R;
+i7-8500Y;2;0;4;UHD 615;Amber Lake Y;
+i5-8500B;6;0;6;UHD 630;Coffee Lake;
+i5-8400H;4;0;8;UHD 630;Coffee Lake;
+i5-8400B;6;0;6;UHD 630;Coffee Lake;
+i5-8365U;4;0;8;UHD;Whiskey Lake;
+i5-8350U;4;0;8;UHD 620;Kaby Lake R;
+i5-8310Y;2;0;4;UHD 617;Amber Lake Y;
+i5-8300H;4;0;8;UHD 630;Coffee Lake;
+i5-8279U;4;0;8;Iris Plus 655;Coffee Lake;
+i5-8269U;4;0;8;Iris Plus 655;Coffee Lake;
+i5-8265U;4;0;8;UHD;Whiskey Lake;
+i5-8260U;4;0;8;UHD 620;Coffee Lake;
+i5-8259U;4;0;8;Iris Plus 655;Coffee Lake;
+i5-8257U;4;0;8;Iris Plus 645;Coffee Lake;
+i5-8250U;4;0;8;UHD 620;Kaby Lake R;
+i5-8210Y;2;0;4;UHD 617;Amber Lake Y;
+i5-8200Y;2;0;4;UHD 615;Amber Lake Y;
+i3-8145U;2;0;4;UHD;Whiskey Lake;
+i3-8140U;2;0;4;UHD 620;Coffee Lake;
+i3-8130U;2;0;4;UHD 620;Kaby Lake R;
+i3-8109U;2;0;4;Iris Plus 655;Coffee Lake;
+i3-8100H;4;0;4;UHD 630;Coffee Lake;
+i3-8100B;4;0;4;UHD 630;Coffee Lake;
+;;;;;;
+i9-7980XE;18;0;36;—;Skylake;
+i9-7960X;16;0;32;—;Skylake;
+i9-7940X;14;0;28;—;Skylake;
+i9-7920X;12;0;24;—;Skylake;
+i9-7900X;10;0;20;—;Skylake;
+i7-7820X;8;0;16;—;Skylake;
+i7-7800X;6;0;12;—;Skylake;
+i7-7740X;4;0;8;—;Kaby Lake;
+i7-7700K;4;0;8;HD 630;Kaby Lake;
+i7-7700;4;0;8;HD 630;Kaby Lake;
+i7-7700T;4;0;8;HD 630;Kaby Lake;
+i5-7640X;4;0;4;—;Kaby Lake;
+i5-7600K;4;0;4;HD 630;Kaby Lake;
+i5-7600;4;0;4;HD 630;Kaby Lake;
+i5-7600T;4;0;4;HD 630;Kaby Lake;
+i5-7500;4;0;4;HD 630;Kaby Lake;
+i5-7500T;4;0;4;HD 630;Kaby Lake;
+i5-7400;4;0;4;HD 630;Kaby Lake;
+i5-7400T;4;0;4;HD 630;Kaby Lake;
+i3-7350K;2;0;4;HD 630;Kaby Lake;
+i3-7320;2;0;4;HD 630;Kaby Lake;
+i3-7300;2;0;4;HD 630;Kaby Lake;
+i3-7300T;2;0;4;HD 630;Kaby Lake;
+i3-7100;2;0;4;HD 630;Kaby Lake;
+i3-7100T;2;0;4;HD 630;Kaby Lake;
+i3-7101E;2;0;4;HD 630;Kaby Lake;
+i3-7101TE;2;0;4;HD 630;Kaby Lake;
+G4620;2;0;4;HD 630;Kaby Lake;
+G4600;2;0;4;HD 630;Kaby Lake;
+G4600T;2;0;4;HD 630;Kaby Lake;
+G4560;2;0;4;HD 610;Kaby Lake;
+G4560T;2;0;4;HD 610;Kaby Lake;
+G3950;2;0;2;HD 610;Kaby Lake;
+G3930;2;0;2;HD 610;Kaby Lake;
+G3930T;2;0;2;HD 610;Kaby Lake;
+;;;;;;
+i7-7920HQ;4;0;8;HD 630;Kaby Lake;
+i7-7820HQ;4;0;8;HD 630;Kaby Lake;
+i7-7820HK;4;0;8;HD 630;Kaby Lake;
+i7-7700HQ;4;0;8;HD 630;Kaby Lake;
+i7-7660U;2;0;4;Iris Plus 640;Kaby Lake;
+i7-7600U;2;0;4;HD 620;Kaby Lake;
+i7-7567U;2;0;4;Iris Plus 650;Kaby Lake;
+i7-7560U;2;0;4;Iris Plus 640;Kaby Lake;
+i7-7500U;2;0;4;HD 620;Kaby Lake;
+i7-7Y75;2;0;4;HD 615;Kaby Lake;
+i5-7440HQ;4;0;4;HD 630;Kaby Lake;
+i5-7300HQ;4;0;4;HD 630;Kaby Lake;
+i5-7360U;2;0;4;Iris Plus 640;Kaby Lake;
+i5-7300U;2;0;4;HD 620;Kaby Lake;
+i5-7287U;2;0;4;Iris Plus 650;Kaby Lake;
+i5-7267U;2;0;4;Iris Plus 650;Kaby Lake;
+i5-7260U;2;0;4;Iris Plus 640;Kaby Lake;
+i5-7200U;2;0;4;HD 620;Kaby Lake;
+i5-7Y57;2;0;4;HD 615;Kaby Lake;
+i5-7Y54;2;0;4;HD 615;Kaby Lake;
+i3-7100H;2;0;4;HD 630;Kaby Lake;
+i3-7167U;2;0;4;Iris Plus 650;Kaby Lake;
+i3-7130U;2;0;4;HD 620;Kaby Lake;
+i3-7100U;2;0;4;HD 620;Kaby Lake;
+m3-7Y32;2;0;4;HD 615;Kaby Lake;
+m3-7Y30;2;0;4;HD 615;Kaby Lake;
+N4200;4;0;4;HD 505;Apollo Lake;
+4415U;2;0;4;HD 610;Kaby Lake;
+4415Y;2;0;4;HD 615;Kaby Lake;
+4410Y;2;0;4;HD 615;Kaby Lake;
+N3450;4;0;4;HD 500;Apollo Lake;
+N3350;2;0;2;HD 500;Apollo Lake;
+3965U;2;0;2;HD 610;Kaby Lake;
+3865U;2;0;2;HD 610;Kaby Lake;

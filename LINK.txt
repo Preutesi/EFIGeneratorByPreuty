@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/1710193/converting-an-xml-document-to-a-dictionary
