@@ -8,19 +8,27 @@
       d:DesignHeight="450" d:DesignWidth="500"
       Title="Page1">
     <Grid>
-        <RadioButton x:Name="rbIntel" Content="RadioButton" HorizontalAlignment="Left" Height="18" Margin="113,127,0,0" VerticalAlignment="Top" Width="18" FontSize="18" Foreground="White"/>
-        <RadioButton x:Name="rbAmd" Content="RadioButton" HorizontalAlignment="Left" Height="18" Margin="211,127,0,0" VerticalAlignment="Top" Width="18" FontSize="18" Foreground="White"/>
-        <Label Panel.ZIndex="5" Content="Intel" HorizontalAlignment="Left" Height="32" Margin="136,116,0,0" VerticalAlignment="Top" Width="63" Foreground="White" FontSize="18"/>
-        <Label Panel.ZIndex="5" Content="AMD" HorizontalAlignment="Left" Height="32" Margin="234,116,0,0" VerticalAlignment="Top" Width="63" Foreground="White" FontSize="18"/>
-        <Label Panel.ZIndex="5" Content="CPU Name:" HorizontalAlignment="Left" Height="32" Margin="43,187,0,0" VerticalAlignment="Top" Width="104" Foreground="White" FontSize="18"/>
-        <TextBox Panel.ZIndex="2" x:Name="txtCPU" HorizontalAlignment="Left" Height="36" Margin="162,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" PreviewKeyDown="SetName" TextChanged="txtCPU_TextChanged" FontSize="18"/>
-        <Label Panel.ZIndex="5" Content="PC:" HorizontalAlignment="Left" Height="32" Margin="43,262,0,0" VerticalAlignment="Top" Width="59" Foreground="White" FontSize="18"/>
-        <ComboBox Panel.ZIndex="1" x:Name="cmbPC" HorizontalAlignment="Left" Height="28" Margin="107,264,0,0" VerticalAlignment="Top" Width="168" FontSize="18">
+        <RadioButton x:Name="rbIntel" Content="RadioButton" HorizontalAlignment="Left" Height="18" Margin="113,60,0,0" VerticalAlignment="Top" Width="18" FontSize="18" Foreground="White"/>
+        <RadioButton x:Name="rbAmd" Content="RadioButton" HorizontalAlignment="Left" Height="18" Margin="211,60,0,0" VerticalAlignment="Top" Width="18" FontSize="18" Foreground="White"/>
+        <Label Panel.ZIndex="5" Content="Intel" HorizontalAlignment="Left" Height="32" Margin="136,49,0,0" VerticalAlignment="Top" Width="63" Foreground="White" FontSize="18"/>
+        <Label Panel.ZIndex="5" Content="AMD" HorizontalAlignment="Left" Height="32" Margin="234,49,0,0" VerticalAlignment="Top" Width="63" Foreground="White" FontSize="18"/>
+        <Label Panel.ZIndex="5" Content="CPU Name:" HorizontalAlignment="Left" Height="32" Margin="44,106,0,0" VerticalAlignment="Top" Width="104" Foreground="White" FontSize="18"/>
+        <TextBox Panel.ZIndex="2" x:Name="txtCPU" HorizontalAlignment="Left" Height="36" Margin="164,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" PreviewKeyDown="SetName" TextChanged="txtCPU_TextChanged" FontSize="18"/>
+        <Label Panel.ZIndex="5" Content="PC:" HorizontalAlignment="Left" Height="32" Margin="45,159,0,0" VerticalAlignment="Top" Width="59" Foreground="White" FontSize="18"/>
+        <ComboBox Panel.ZIndex="1" x:Name="cmbPC" HorizontalAlignment="Left" Height="28" Margin="109,161,0,0" VerticalAlignment="Top" Width="168" FontSize="18">
             <ComboBoxItem>Laptop</ComboBoxItem>
             <ComboBoxItem>Desktop</ComboBoxItem>
             <ComboBoxItem>High end desktop</ComboBoxItem>
         </ComboBox>
-        <Label Panel.ZIndex="5" Content="CPU:" HorizontalAlignment="Left" Height="32" Margin="43,116,0,0" VerticalAlignment="Top" Width="59" Foreground="White" FontSize="18"/>
-        <ListBox Panel.ZIndex="3" x:Name="lstCPU" HorizontalAlignment="Left" Height="0" Margin="162,223,0,0" VerticalAlignment="Top" Width="270" PreviewMouseDown="SetNameOnclick"/>
+        <Label Panel.ZIndex="5" Content="CPU:" HorizontalAlignment="Left" Height="32" Margin="43,49,0,0" VerticalAlignment="Top" Width="59" Foreground="White" FontSize="18"/>
+        <ListBox Panel.ZIndex="3" x:Name="lstCPU" HorizontalAlignment="Left" Height="0" Margin="164,142,0,0" VerticalAlignment="Top" Width="270" PreviewMouseDown="SetNameOnclick"/>
+        <Label Panel.ZIndex="5" Content="PC Brand:" HorizontalAlignment="Left" Height="32" Margin="44,211,0,0" VerticalAlignment="Top" Width="104" Foreground="White" FontSize="18"/>
+        <TextBox Panel.ZIndex="2" x:Name="txtPC_Brand" HorizontalAlignment="Left" Height="36" Margin="164,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" PreviewKeyDown="SetName" TextChanged="txtCPU_TextChanged" FontSize="18"/>
+        <ListBox Panel.ZIndex="3" x:Name="lstPC_Brand" HorizontalAlignment="Left" Height="0" Margin="164,247,0,0" VerticalAlignment="Top" Width="270" PreviewMouseDown="SetNameOnclick"/>
+        <RadioButton x:Name="rbRelease" Content="RadioButton" HorizontalAlignment="Left" Height="18" Margin="213,278,0,0" VerticalAlignment="Top" Width="18" FontSize="18" Foreground="White"/>
+        <RadioButton x:Name="rbDebug" Content="RadioButton" HorizontalAlignment="Left" Height="18" Margin="331,278,0,0" VerticalAlignment="Top" Width="18" FontSize="18" Foreground="White"/>
+        <Label Panel.ZIndex="5" Content="Release" HorizontalAlignment="Left" Height="32" Margin="236,267,0,0" VerticalAlignment="Top" Width="75" Foreground="White" FontSize="18"/>
+        <Label Panel.ZIndex="5" Content="Debug" HorizontalAlignment="Left" Height="41" Margin="354,267,0,0" VerticalAlignment="Top" Width="63" Foreground="White" FontSize="18"/>
+        <Label Panel.ZIndex="5" Content="Opencore version:" HorizontalAlignment="Left" Height="32" Margin="45,267,0,0" VerticalAlignment="Top" Width="163" Foreground="White" FontSize="18"/>
     </Grid>
 </Page>
