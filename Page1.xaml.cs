@@ -99,22 +99,36 @@ namespace EFIGeneratorByPreuty
             }
             else if (e.Key == Key.Up)
             {
-                if (lstCPU.SelectedIndex - 1 >= 0)
+                try
                 {
-                    var item = lstCPU.Items.GetItemAt(lstCPU.SelectedIndex - 1);
-                    lstCPU.ScrollIntoView(item);
-                    ListBoxItem lbi = (ListBoxItem)lstCPU.ItemContainerGenerator.ContainerFromIndex(lstCPU.SelectedIndex - 1);
-                    lbi.IsSelected = true;
+                    if (lstCPU.SelectedIndex - 1 >= 0)
+                    {
+                        var item = lstCPU.Items.GetItemAt(lstCPU.SelectedIndex - 1);
+                        lstCPU.ScrollIntoView(item);
+                        ListBoxItem lbi = (ListBoxItem)lstCPU.ItemContainerGenerator.ContainerFromIndex(lstCPU.SelectedIndex - 1);
+                        lbi.IsSelected = true;
+                    }
+                }
+                catch 
+                {
+                    return;
                 }
             }
             else if (e.Key == Key.Down)
             {
-                if (lstCPU.SelectedIndex + 1 < allNames.Count)
+                try
                 {
-                    var item = lstCPU.Items.GetItemAt(lstCPU.SelectedIndex + 1);
-                    lstCPU.ScrollIntoView(item);
-                    ListBoxItem lbi = (ListBoxItem)lstCPU.ItemContainerGenerator.ContainerFromIndex(lstCPU.SelectedIndex + 1);
-                    lbi.IsSelected = true;
+                    if (lstCPU.SelectedIndex + 1 < allNames.Count)
+                    {
+                        var item = lstCPU.Items.GetItemAt(lstCPU.SelectedIndex + 1);
+                        lstCPU.ScrollIntoView(item);
+                        ListBoxItem lbi = (ListBoxItem)lstCPU.ItemContainerGenerator.ContainerFromIndex(lstCPU.SelectedIndex + 1);
+                        lbi.IsSelected = true;
+                    }
+                }
+                catch 
+                {
+                    return;       
                 }
             }
             txtCPU.Focus();
@@ -157,6 +171,7 @@ namespace EFIGeneratorByPreuty
         {
             string path = Directory.GetCurrentDirectory() + @"\AllSupported\AMDCPUNames.csv";
             List<string> names = new List<string>();
+            List<string> finalNames = new List<string>();
 
             StreamReader sr = new StreamReader(path);
             string line = sr.ReadLine();
@@ -169,7 +184,45 @@ namespace EFIGeneratorByPreuty
                 items = items.Where(x => !string.IsNullOrEmpty(x)).ToArray();
                 for (int i = 0; i < items.Length; i++)
                     items[i] = items[i].Replace("\"", "");
-                names.Add(items[1]);
+                names.Add(items[1].Replace("™", "") + "|" + items[2].Replace("™", ""));
+            }
+            List<string> x = BetterAMD();
+
+            for (int i = 0; i < names.Count; i++)
+                for (int j = 0; j < x.Count; j++)
+                {
+                    if (names[i].Contains(x[j].Split("|")[1]))
+                        finalNames.Add(names[i].Split("|")[0] + "|" + x[j].Split("|")[0]);
+                }
+
+            return finalNames;
+        }
+
+        List<string> BetterAMD()
+        {
+            string path = Directory.GetCurrentDirectory() + @"\AllSupported\BetterAMD.csv";
+            StreamReader sr = new StreamReader(path);
+            List<string> names = new List<string>();
+            int counter = 0;
+
+            while (true)
+            {
+                string line = sr.ReadLine();
+                if (line == null)
+                    break;
+                string[] items = line.Split(";");
+                if (items[0] == "" && items[1] == "" && counter == 1)
+                    names.Add(names[counter - 1]);
+                if (items[0] == "" && items[1] == "" && counter != 1)
+                    names.Add(names[counter - 2]);
+                else if (items[0] == "" && items[1] != "")
+                {
+                    string lilItem = names[counter - 2].Split("|")[0];
+                    names.Add(lilItem + "|" + items[1]);
+                }
+                else if (items[0] != "" && items[1] != "")
+                    names.Add(items[0] + "|" + items[1]);
+                counter++;
             }
             return names;
         }

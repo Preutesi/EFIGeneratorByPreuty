@@ -19,6 +19,7 @@ using System.IO.Compression;
 using System.IO.Packaging;
 using System.Linq.Expressions;
 using System.Threading;
+using System.Net.NetworkInformation;
 
 namespace EFIGeneratorByPreuty
 {
@@ -40,7 +41,10 @@ namespace EFIGeneratorByPreuty
 
         void CheckForUpdates()
         {
-            CheckForOpencore();
+            if (IsConnectedToInternet())
+                CheckForOpencore();
+            else
+                OpenWindow();
         }
 
         void DeleteUselessFilesOpencore()
@@ -145,6 +149,21 @@ namespace EFIGeneratorByPreuty
             foreach (string item in Directory.GetDirectories(path))
                 if (!item.Replace(Directory.GetCurrentDirectory(), "").Contains("EFI"))
                     Directory.Delete(item, true);
+        }
+
+        bool IsConnectedToInternet()
+        {
+            string host = "http://www.google.com";  
+            bool result = false;
+            Ping p = new Ping();
+            try
+            {
+                PingReply reply = p.Send(host, 3000);
+                if (reply.Status == IPStatus.Success)
+                    return true;
+            }
+            catch { }
+            return result;
         }
 
     }
