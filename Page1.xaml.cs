@@ -1,21 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Xml.Linq;
 using System.IO;
+using System.Linq;
+using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Threading;
-using System.Reflection;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace EFIGeneratorByPreuty
 {
@@ -31,7 +22,10 @@ namespace EFIGeneratorByPreuty
         public static string cpuType = "";
         public static string cpuName = "";
         public static string pcType = "";
+        public static string pcBrand = "";
+        public static string opencoreVersion = "";
 
+        public static ListBox l;
 
         public Page1()
         {
@@ -45,23 +39,55 @@ namespace EFIGeneratorByPreuty
             lstCPU.Items.Clear();
             for (int i = 0; i < allNames.Count; i++)
                 lstCPU.Items.Add(allNames[i]);
+            l = lstCPU;
         }
 
-         void BkgProcess()
+        void cht()
         {
-            Dispatcher.BeginInvoke(new Action(() =>
+            while (true)
             {
-                cpuName = txtCPU.Text;
-                if (!(bool)rbIntel.IsChecked && !(bool)rbAmd.IsChecked)
-                    cpuType = "";
-                if ((bool)rbIntel.IsChecked)
-                    cpuType = "Intel";
-                else if ((bool)rbAmd.IsChecked)
-                    cpuType = "Amd";
-                pcType = cmbPC.Text;
-            }));
+                txtCPU.Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    cpuName = txtCPU.Text;
+                }));
+
+                cmbPC.Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    pcType = cmbPC.Text;
+                }));
+
+                cmbBrand.Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    pcBrand = cmbBrand.Text;
+                }));
+
+                rbDebug.Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    rbRelease.Dispatcher.BeginInvoke(new Action(() =>
+                    {
+                        if (!(bool)rbDebug.IsChecked && !(bool)rbRelease.IsChecked)
+                            opencoreVersion = "";
+                        if ((bool)rbRelease.IsChecked)
+                            opencoreVersion = "Release";
+                        else if ((bool)rbDebug.IsChecked)
+                            opencoreVersion = "Debug";
+                    }));
+                }));
+                Thread.Sleep(100);
+                if (Creation.stop)
+                    break;
+            }
         }
-        
+
+        void BkgProcess()
+        {
+            Thread t = new Thread(() =>
+            {
+                cht();
+            });
+            t.Start();
+        }
+
         void CheckForIntelUPDATES()
         {
             //fai partire un codice python per scraping
@@ -74,7 +100,7 @@ namespace EFIGeneratorByPreuty
 
         int before = 0;
 
-        private void txtCPU_TextChanged(object sender, TextChangedEventArgs e)
+        void txtCPU_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (before == 0 && txtCPU.Text.Length == 1)
                 lstCPU.Height = 135;
@@ -90,7 +116,7 @@ namespace EFIGeneratorByPreuty
             txtCPU.Focus();
         }
 
-        private void SetName(object sender, KeyEventArgs e)
+        void SetName(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
@@ -109,7 +135,7 @@ namespace EFIGeneratorByPreuty
                         lbi.IsSelected = true;
                     }
                 }
-                catch 
+                catch
                 {
                     return;
                 }
@@ -126,18 +152,22 @@ namespace EFIGeneratorByPreuty
                         lbi.IsSelected = true;
                     }
                 }
-                catch 
+                catch
                 {
-                    return;       
+                    return;
                 }
             }
             txtCPU.Focus();
         }
 
-        private void SetNameOnclick(object sender, MouseButtonEventArgs e)
+        void SetNameOnclick(object sender, MouseButtonEventArgs e)
         {
-            txtCPU.Text = allNames[lstCPU.SelectedIndex];
-            lstCPU.Height = 0;
+            string x = e.OriginalSource.GetType().Name;
+            if (lstCPU.Height != 0 && x != "Rectangle")
+            {
+                txtCPU.Text = allNames[lstCPU.SelectedIndex];
+                lstCPU.Height = 0;
+            }
         }
 
         void GetAllCPUNames()
@@ -160,9 +190,9 @@ namespace EFIGeneratorByPreuty
                     break;
                 string[] items = line.Split(";");
                 if (int.TryParse(items[1], out int i))
-                    names.Add(items[0] + " | " + items[items.Length - 2]);
-                else 
-                    names.Add(items[0] + " " + items[1] + " | " + items[items.Length - 1]);
+                    names.Add("Intel " + items[0] + " | " + items[items.Length - 2]);
+                else
+                    names.Add("Intel " + items[0] + " " + items[1] + " | " + items[items.Length - 1]);
             }
             return names;
         }
@@ -184,7 +214,10 @@ namespace EFIGeneratorByPreuty
                 items = items.Where(x => !string.IsNullOrEmpty(x)).ToArray();
                 for (int i = 0; i < items.Length; i++)
                     items[i] = items[i].Replace("\"", "");
-                names.Add(items[1].Replace("™", "") + "|" + items[2].Replace("™", ""));
+                if (!items[1].Contains("AMD"))
+                    names.Add("AMD " + items[1].Replace("™", "") + "|" + items[2].Replace("™", ""));
+                else
+                    names.Add(items[1].Replace("™", "") + "|" + items[2].Replace("™", ""));
             }
             List<string> x = BetterAMD();
 

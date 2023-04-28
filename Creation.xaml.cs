@@ -22,6 +22,7 @@ namespace EFIGeneratorByPreuty
     {
         int page = 1;
         UserPC pc = new UserPC();
+        public static bool stop = false;
 
         public Creation()
         {
@@ -29,21 +30,29 @@ namespace EFIGeneratorByPreuty
             _mainFrame.Navigate(new Page1());
         }
 
-        private void Move(object sender, MouseButtonEventArgs e)
+        private void MoveOrClose(object sender, MouseButtonEventArgs e)
         {
-            this.DragMove();
+            string x = e.OriginalSource.GetType().Name;
+            if (x != null)
+                if ( x != "Ellipse" && x != "TextBlock" && x != "TextBoxView" && x != "Rectangle")
+                {
+                    this.DragMove();
+                    Page1.l.Height = 0;
+                }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            pc.CpuType = Page1.cpuType;
             pc.CpuName = Page1.cpuName;
             pc.PCType = Page1.pcType;
+            pc.PCBrand = Page1.pcBrand;
+            pc.OCVersion = Page1.opencoreVersion;
             if (!pc.CheckCorrectValuesPage1(Page1.allNames))
             {
                 lblError.Content = "⚠ Make sure to fill up everything and that you used the proposed cpu names";
                 return;
             }
+            stop = true;
             lblError.Content = "";
         }
     }

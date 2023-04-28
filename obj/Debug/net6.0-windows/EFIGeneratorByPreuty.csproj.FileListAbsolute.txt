@@ -50,3 +50,5 @@ C:\Users\erika\OneDrive\Desktop\EFIGeneratorByPreuty\obj\Debug\net6.0-windows\EF
 C:\Users\erika\OneDrive\Desktop\EFIGeneratorByPreuty\obj\Debug\net6.0-windows\ref\EFIGeneratorByPreuty.dll
 C:\Users\erika\OneDrive\Desktop\EFIGeneratorByPreuty\obj\Debug\net6.0-windows\Page2.g.cs
 C:\Users\erika\OneDrive\Desktop\EFIGeneratorByPreuty\obj\Debug\net6.0-windows\Page2.baml
+C:\Users\andre\Documents\GitHub repos\EFIGeneratorByPreuty\EFIGeneratorByPreuty\obj\Debug\net6.0-windows\Page2.g.cs
+C:\Users\andre\Documents\GitHub repos\EFIGeneratorByPreuty\EFIGeneratorByPreuty\obj\Debug\net6.0-windows\Page2.baml
