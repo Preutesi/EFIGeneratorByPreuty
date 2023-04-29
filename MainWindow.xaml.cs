@@ -1,25 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Net;
-using System.Net.Http;
+﻿using HtmlAgilityPack;
+using System;
 using System.IO;
 using System.IO.Compression;
-using System.IO.Packaging;
-using System.Linq.Expressions;
-using System.Threading;
+using System.Linq;
+using System.Net.Http;
 using System.Net.NetworkInformation;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Input;
 
 namespace EFIGeneratorByPreuty
 {
@@ -39,10 +28,82 @@ namespace EFIGeneratorByPreuty
             this.DragMove();
         }
 
+        Task<string> ReturnResponse(string url)
+        {
+            HttpClient client = new HttpClient();
+            var response = client.GetStringAsync(url);
+            return response;
+        }
+
+        string latestValue = "";
+
+        int Latest()
+        {
+            var r = ReturnResponse("https://github.com/acidanthera/OpenCorePkg/releases").Result;
+
+            HtmlDocument htmlDoc = new HtmlDocument();
+            htmlDoc.LoadHtml(r);
+
+            var version = htmlDoc.DocumentNode.Descendants("span")
+                .Where(node => !node.GetAttributeValue("class", "").Contains("f1 text-bold d-inline mr-3"))
+                .ToList();
+            foreach (var v in version)
+                if (int.TryParse(v.InnerHtml.Replace(".", ""), out int i) && v.InnerHtml.Contains("."))
+                {
+                    latestValue = v.InnerHtml.Replace(" ", "");
+                    latestValue = Regex.Replace(latestValue, @"\n", "");
+                    return int.Parse(v.InnerHtml.Replace(" ", "").Replace(@"\n", "").Replace(".", ""));
+                }
+            return -1;
+        }
+
+        string[]? LatestLinks()
+        {
+            string[] retStr = new string[2];
+            //Debug=0   |   Release=1
+            string bu = "https://github.com/acidanthera/OpenCorePkg/releases";
+            retStr[0] = bu + $"/download/{latestValue}/OpenCore-{latestValue}-DEBUG.zip";
+            retStr[1] = bu + $"/download/{latestValue}/OpenCore-{latestValue}-RELEASE.zip";
+
+            string path = Directory.GetCurrentDirectory() + @"\Versions\versions.txt";
+
+            string[] items = File.ReadAllLines(path);
+            items[0] = "Opencore=" + latestValue;
+
+            StreamWriter sw = new StreamWriter(path, false);
+            foreach (string x in items)
+                sw.WriteLine(x.ToString());
+            sw.Close();
+
+            return retStr;
+        }
+
+        string[]? GetLatestVersion()
+        {
+            ExecutionLog.Text = "Checking latest version...";
+            string path = Directory.GetCurrentDirectory() + @"\Versions\versions.txt";
+            StreamReader sr = new StreamReader(path);
+
+            int currentVersion = int.Parse(sr.ReadLine().Split("=")[1].Replace(".", ""));
+            sr.Close();
+            int latestVersion = Latest();
+
+            if (currentVersion == latestVersion)
+                return null;
+            else
+                return LatestLinks();
+        }
+
         void CheckForUpdates()
         {
             if (IsConnectedToInternet())
-                CheckForOpencore();
+            {
+                string[]? links = GetLatestVersion();
+                if (links != null)
+                    CheckForOpencore(links);
+                else
+                    OpenWindow();
+            }
             else
                 OpenWindow();
         }
@@ -83,7 +144,7 @@ namespace EFIGeneratorByPreuty
             ExecutionLog.Text = "Deleting useless files... DONE";
         }
 
-        async void CheckForOpencore()
+        async void CheckForOpencore(string[] links)
         {
             ExecutionLog.Text = "Checking for opencore folder updates... DEBUG";
             string pathDEBUG = Directory.GetCurrentDirectory() + @"\Files\Debug\OPENCORE\Debug.zip";
@@ -97,7 +158,7 @@ namespace EFIGeneratorByPreuty
 
             ExecutionLog.Text = "Checking for opencore folder updates... RELEASE";
 
-            using (var stream = await httpClient.GetStreamAsync("https://github.com/acidanthera/OpenCorePkg/releases/download/0.9.1/OpenCore-0.9.1-DEBUG.zip"))
+            using (var stream = await httpClient.GetStreamAsync(links[0]))
             {
                 using (var fileStream = new FileStream(pathDEBUG, FileMode.CreateNew))
                 {
@@ -105,7 +166,7 @@ namespace EFIGeneratorByPreuty
                 }
             }
 
-            using (var stream = await httpClient.GetStreamAsync("https://github.com/acidanthera/OpenCorePkg/releases/download/0.9.1/OpenCore-0.9.1-RELEASE.zip"))
+            using (var stream = await httpClient.GetStreamAsync(links[1]))
             {
                 using (var fileStream = new FileStream(pathRELEASE, FileMode.CreateNew))
                 {
@@ -153,17 +214,17 @@ namespace EFIGeneratorByPreuty
 
         bool IsConnectedToInternet()
         {
-            string host = "http://www.google.com";  
-            bool result = false;
-            Ping p = new Ping();
             try
             {
-                PingReply reply = p.Send(host, 3000);
-                if (reply.Status == IPStatus.Success)
-                    return true;
+                Ping myPing = new Ping();
+                String host = "google.com";
+                byte[] buffer = new byte[32];
+                int timeout = 1000;
+                PingOptions pingOptions = new PingOptions();
+                PingReply reply = myPing.Send(host, timeout, buffer, pingOptions);
+                return (reply.Status == IPStatus.Success);
             }
-            catch { }
-            return result;
+            catch { return false; }
         }
 
     }

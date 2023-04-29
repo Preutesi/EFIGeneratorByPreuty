@@ -52,3 +52,5 @@ C:\Users\erika\OneDrive\Desktop\EFIGeneratorByPreuty\obj\Debug\net6.0-windows\Pa
 C:\Users\erika\OneDrive\Desktop\EFIGeneratorByPreuty\obj\Debug\net6.0-windows\Page2.baml
 C:\Users\andre\Documents\GitHub repos\EFIGeneratorByPreuty\EFIGeneratorByPreuty\obj\Debug\net6.0-windows\Page2.g.cs
 C:\Users\andre\Documents\GitHub repos\EFIGeneratorByPreuty\EFIGeneratorByPreuty\obj\Debug\net6.0-windows\Page2.baml
+C:\Users\andre\Documents\GitHub repos\EFIGeneratorByPreuty\EFIGeneratorByPreuty\bin\Debug\net6.0-windows\HtmlAgilityPack.dll
+C:\Users\andre\Documents\GitHub repos\EFIGeneratorByPreuty\EFIGeneratorByPreuty\obj\Debug\net6.0-windows\EFIGeneratorByPreuty.csproj.CopyComplete
