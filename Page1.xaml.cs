@@ -25,6 +25,8 @@ namespace EFIGeneratorByPreuty
         public static string pcBrand = "";
         public static string opencoreVersion = "";
 
+        public static ComboBox CmbPC, CmbBrand;
+
         public static ListBox l;
 
         public Page1()
@@ -40,6 +42,8 @@ namespace EFIGeneratorByPreuty
             for (int i = 0; i < allNames.Count; i++)
                 lstCPU.Items.Add(allNames[i]);
             l = lstCPU;
+            CmbPC = cmbPC;
+            CmbBrand = cmbBrand;
         }
 
         void cht()
@@ -258,6 +262,16 @@ namespace EFIGeneratorByPreuty
                 counter++;
             }
             return names;
+        }
+
+        private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            cmbBrand.IsDropDownOpen = true;
+        }
+
+        private void Button_Click_1(object sender, System.Windows.RoutedEventArgs e)
+        {
+            cmbPC.IsDropDownOpen = true;
         }
     }
 }

@@ -16,7 +16,7 @@
     <Grid>
         <Button Content="Next" HorizontalAlignment="Left" Height="31" Margin="364,397,0,0" VerticalAlignment="Top" Width="126" Click="Button_Click"/>
         <!--CREATION WINDOW-->
-        <DockPanel Margin="0,0,0,106">
+        <DockPanel Panel.ZIndex="-1" Margin="0,0,0,106">
             <Frame x:Name="_mainFrame"/>
         </DockPanel>
         <Label x:Name="lblError" Content="" HorizontalAlignment="Center" Height="31" Margin="0,349,0,0" VerticalAlignment="Top" Width="444" Foreground="Red"/>

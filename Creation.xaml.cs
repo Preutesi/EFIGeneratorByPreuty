@@ -36,6 +36,17 @@ namespace EFIGeneratorByPreuty
             if (x != null)
                 if ( x != "Ellipse" && x != "TextBlock" && x != "TextBoxView" && x != "Rectangle")
                 {
+                    if (Page1.CmbBrand.IsMouseOver)
+                    {
+                        Page1.CmbBrand.IsDropDownOpen = true;
+                        return;
+                    }
+                    else if (Page1.CmbPC.IsMouseOver)
+                    {
+                        Page1.CmbPC.IsDropDownOpen = true;
+                        return;
+                    }
+
                     this.DragMove();
                     Page1.l.Height = 0;
                 }

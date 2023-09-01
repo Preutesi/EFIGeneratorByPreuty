@@ -11,7 +11,7 @@
         <Label Panel.ZIndex="5" Content="CPU Name:" HorizontalAlignment="Left" Height="32" Margin="45,57,0,0" VerticalAlignment="Top" Width="103" Foreground="White" FontSize="18"/>
         <TextBox Panel.ZIndex="2" x:Name="txtCPU" HorizontalAlignment="Left" Height="36" Margin="164,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" PreviewKeyDown="SetName" TextChanged="txtCPU_TextChanged" FontSize="18"/>
         <Label Panel.ZIndex="5" Content="PC:" HorizontalAlignment="Left" Height="32" Margin="45,142,0,0" VerticalAlignment="Top" Width="59" Foreground="White" FontSize="18"/>
-        <ComboBox Panel.ZIndex="1" x:Name="cmbPC" HorizontalAlignment="Left" Height="28" Margin="109,144,0,0" VerticalAlignment="Top" Width="168" FontSize="18">
+        <ComboBox Panel.ZIndex="1" x:Name="cmbPC" HorizontalAlignment="Left" Height="28" Margin="109,144,0,0" VerticalAlignment="Top" Width="168" FontSize="18" Background="#FFEEEEEE">
             <ComboBoxItem>Laptop</ComboBoxItem>
             <ComboBoxItem>Desktop</ComboBoxItem>
             <ComboBoxItem>High end desktop</ComboBoxItem>
@@ -23,7 +23,7 @@
         <Label Panel.ZIndex="5" Content="Release" HorizontalAlignment="Left" Height="32" Margin="236,302,0,0" VerticalAlignment="Top" Width="75" Foreground="White" FontSize="18"/>
         <Label Panel.ZIndex="5" Content="Debug" HorizontalAlignment="Left" Height="41" Margin="354,302,0,0" VerticalAlignment="Top" Width="63" Foreground="White" FontSize="18"/>
         <Label Panel.ZIndex="5" Content="Opencore version:" HorizontalAlignment="Left" Height="32" Margin="45,302,0,0" VerticalAlignment="Top" Width="163" Foreground="White" FontSize="18"/>
-        <ComboBox Panel.ZIndex="1" x:Name="cmbBrand" HorizontalAlignment="Left" Height="28" Margin="152,225,0,0" VerticalAlignment="Top" Width="168" FontSize="18">
+        <ComboBox Uid="btn1" Panel.ZIndex="1" x:Name="cmbBrand" HorizontalAlignment="Left" Height="28" Margin="152,225,0,0" VerticalAlignment="Top" Width="168" FontSize="18" Background="#FFEEEEEE">
             <ComboBoxItem Content="HP"/>
             <ComboBoxItem Content="DELL"/>
             <ComboBoxItem Content="Other"/>
